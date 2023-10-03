@@ -86,6 +86,89 @@
     me.name = 'Ayush';
     me.isStudy = true;
     me.printIntro();
+
+    // Class 
+    class vichle  {
+      constructor(name,maker,engine){
+        this.name = name,
+        this.maker = maker,
+        this.engine = engine
+      }
+      getDetails(){
+        return (`${this.name} bike ek jabar dast bike he jise ${this.maker} ne banaya he jisme ${this.engine} power ka engine laga hua he`);
+      }
+    }
+    let vichle1 = new vichle('hayabusa','suzuki','1340cc');
+    let vichle2 = new vichle('ninja','kawasaki','990cc');
+    console.log(vichle2.getDetails());
+
+    // tradtional way class
+    function vichleNew(name,maker,engine){
+      this.name = name,
+      this.maker = maker,
+      this.engine = engine
+    }
+    vichleNew.prototype.getNewdetail = function(){
+      console.log(`${this.name} bike ek bakwas bike he jise ${this.maker} ne banaya he jisme ${this.engine} power ka engine laga hua he`);
+    }
+    let vichle1new = new vichleNew('platina','bajaj','150cc');
+    let vichle2New = new vichleNew('bikki','tvs','100cc');
+    vichle1new.getNewdetail();
+
+    // encapsulation
+    class personol{
+      constructor(name,id){
+        this.name = name,
+        this.id = id
+      }
+      addRess(addr){
+        this.addr = addr
+      }
+      getPersonal(){
+        console.log(`my name is ${this.name} and my agent id is ${this.id} or mere address ka ${this.addr}`)
+      }
+    }
+    let personol1 = new personol('James Bond', '0007' );
+    personol1.addRess('kuch ata pata nahi he');
+    personol1.getPersonal();
+
+    //abstraction example encapsulation
+    function perDetail(fname,lname){
+      let firstName = fname;
+      let lastName = lname;
+      let getNoacces = function(){
+        return( `First name is ${firstName} and Last name is ${lastName}`);
+      }
+      this.getAccess = function(){
+        return( `First name is ${firstName} and Last name is ${lastName}`);
+      }
+    }
+    let perDetailNew = new perDetail('Ayusman','Khurana');
+    console.log(perDetailNew.firstName + '  ' + perDetail.lastName + '  ' + perDetailNew.getNoacces);
+    console.log(perDetailNew.getAccess());
+   
+    //inheritance
+    class boy{
+      constructor(name){
+        this.name = name
+      }
+      toString(){
+        return (`my name is ${this.name} me duniya me akela hun. `);
+      }
+    }
+    class student extends boy{
+      constructor(name,id){
+        super(name);
+        // this.name = name;
+        this.id = id;
+      }
+      toString(){
+        return (`my name is ${this.name} golservey me duniya me akela hun. room no. ${this.id}`);
+      }
+    }
+    let boyNew = new student('Amar Akbar Anthony', 22);
+    console.log(boyNew.toString());
+    ///new
     
    </script>
 </html>
