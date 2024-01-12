@@ -22,6 +22,8 @@ import Manicure from './Components/Gallery/Manicure'
 import Pedicure from './Components/Gallery/Pedicure'
 import ShowALL from './Components/Gallery/ShowALL';
 import Params from './Components/Params';
+import Signin from './Components/Signin';
+import Login from './Components/Login';
 
 // const router = createBrowserRouter([
 //   {
@@ -55,9 +57,9 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path='/' element={<App/>}>
       <Route path='' element={<Home/>} />
-      <Route path='about' element={<About/>} />
-      <Route path='contact' element={<Contact/>} />
-      <Route path='service' element={<Services/>} />
+      <Route path='/about' element={<About/>} />
+      <Route path='/contact' element={<Contact/>} />
+      <Route path='/service' element={<Services/>} />
       <Route 
       path='gallery' 
       element={<Gallery/>} 
@@ -68,7 +70,9 @@ const router = createBrowserRouter(
         <Route path="/gallery/makeup" element={<Makeup />} />
         <Route path="/gallery/manicure" element={<Manicure />} />
         <Route path="/gallery/pedicure" element={<Pedicure />} />
-        </Route>
+      </Route>
+      <Route path='/login' element={<Login/>} />
+      <Route path='/signin' element={<Signin/>} />
       <Route path='service/:param' element={<Params/>} />
     </Route>
   )

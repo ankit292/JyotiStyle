@@ -1,20 +1,27 @@
 import React from 'react'
-import gallery2 from './../../dummy/large-gallery/gallery-2.jpg'
+// import gallery2 from './../../dummy/large-gallery/gallery-2.jpg'
+import AllImgs from './GalleryImg/GalleryImgs';
 export default function Hair() {
   return (
     <>
       <div className="filterable-items">
-        <div className="gallery-item filterable-item manicure">
-          <a href="dummy/large-gallery/gallery-1.jpg">
-            <figure className="featured-image">
-              <img src={gallery2} alt="" />
-              <figcaption>
-                <h2 className="gallery-title">Lorem ipsum dolor sit amet</h2>
-                <p>Maecenas dictum suscipit</p>
-              </figcaption>
-            </figure>
-          </a>
-        </div>
+        {AllImgs.hair.map((event)=>{
+              const { id,image,name,title,price,description } = event;
+              return(
+                  <div className="gallery-item filterable-item manicure" key={id}>
+                    <a className='false'  href="dummy/large-gallery/gallery-1.jpg" alt='dummy'>
+                      <figure className="featured-image">
+                        <img src={image} alt="" />
+                        <figcaption>
+                          <span>{name}</span>
+                          <h2 className="gallery-title">{title} <span>{price}</span></h2>
+                          <p>{description}</p>
+                        </figcaption>
+                      </figure>
+                    </a>
+                  </div>
+              )
+            })}
       </div>
     </>
   )

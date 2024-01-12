@@ -23,16 +23,6 @@ export default function Slider() {
           initialSlide: 1,
           slidingDuration: 500,
           slidingDelay: 100,
-          onSliding: (nextSlide) =>
-            console.debug("onSliding(nextSlide): ", nextSlide),
-          onBeforeSliding: (previousSlide, nextSlide) =>
-            console.debug(
-              "onBeforeSliding(previousSlide, nextSlide): ",
-              previousSlide,
-              nextSlide
-            ),
-          onAfterSliding: (nextSlide) =>
-            console.debug("onAfterSliding(nextSlide): ", nextSlide),
         }}
       >
 

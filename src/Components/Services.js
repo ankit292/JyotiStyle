@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import icon1 from './../images/icon-1.png'
 import icon2 from './../images/icon-2.png'
 import icon3 from './../images/icon-3.png'
@@ -7,7 +7,20 @@ import icon5 from './../images/icon-5.png'
 import icon6 from './../images/icon-6.png'
 import icon7 from './../images/icon-7.png'
 import icon8 from './../images/icon-4.png'
+import { useNavigate } from 'react-router-dom'
 export default function Services() {
+  const history = useNavigate(null)
+  const serviseFunc = ()=>{
+     
+  }
+  useEffect(()=>{
+    if(localStorage.getItem('authToken')){
+      serviseFunc()
+    }else{
+      history('/signin')
+    }
+    
+  },[])
   return (
     <main className="main-content">
         <div className="page">

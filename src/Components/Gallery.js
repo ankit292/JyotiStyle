@@ -1,6 +1,6 @@
 import React from 'react'
 
-import GalleryLink from './Gallery/GalleryLink'
+// import GalleryLink from './Gallery/GalleryLink'
 import { Outlet } from 'react-router-dom'
 
 
@@ -9,7 +9,7 @@ export default function Gallery() {
     <main className="main-content">
         <div className="page">
           <div className="container">
-            <div className="text-center">
+            {/* <div className="text-center">
               <div className="filter-links filterable-nav">
                 <select className="mobile-filter">
                   <option value="*">Show all</option>
@@ -21,7 +21,7 @@ export default function Gallery() {
                 </select>
                 <GalleryLink />
               </div>
-            </div>
+            </div> */}
             <Outlet />
             
           </div>
